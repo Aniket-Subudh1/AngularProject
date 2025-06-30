@@ -1,0 +1,109 @@
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-in-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-in-out;
+}
+
+.bubble-container {
+  right: 1.5rem;
+  position: fixed;
+  max-width: 300px;
+  z-index: 50;
+}
+
+@media (min-width: 768px) {
+  .bubble-container {
+    right: 8%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bubble-container {
+    right: 10%;
+  }
+}
+
+/* Ensure dropdown options match the black background */
+select {
+  background-color: #1a1a1a !important;
+  color: #fff;
+}
+
+option {
+  background-color: #1a1a1a !important;
+  color: #fff;
+}
+
+/* Gradient border animation */
+.border-gradient-to-r {
+  border-image: linear-gradient(to right, #f59e0b, #eab308) 1;
+}
+
+/* Animation for fade-in effect */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animation for slide-in effect */
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom styling for the right column */
+.right-column {
+  min-height: 200px; /* Ensure minimum height for alignment */
+}

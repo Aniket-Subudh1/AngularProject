@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.landing-page1 {
+  background-color: #000; 
+  background-image: 
+      radial-gradient(circle at 30% 20%, rgba(241, 254, 0, 0.2), transparent 40%),
+      radial-gradient(circle at 70% 40%, rgba(191, 73, 0, 0.15), transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(241, 254, 0, 0.1), transparent 30%),
+      radial-gradient(circle at 60% 70%, rgba(191, 73, 0, 0.25), transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(191, 73, 0, 0.1), transparent 30%);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+.glow-effect {
+  box-shadow: 0 0 20px rgba(223, 248, 33, 0.1), 0 0 40px rgba(223, 248, 33, 0.1), 0 0 60px rgba(223, 248, 33, 0.1);
+}
+
+.glow-effect::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -30px;
+  right: -30px;
+  bottom: -8px;
+  background: radial-gradient(circle, rgba(223, 248, 33, 0.1) 0%, transparent 10%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.landing-page {
+  background-color: #000; 
+  background-image: 
+      linear-gradient(to bottom, rgba(191, 73, 0, 0.2), rgba(0, 0, 0, 1)), 
+      radial-gradient(circle at 80% 90%, rgba(191, 73, 0, 0.1), transparent 30%),
+      radial-gradient(circle at 0% 10%, rgba(241, 254, 0, 0.2), transparent 40%),
+      radial-gradient(circle at 70% 40%, rgba(191, 73, 0, 0.15), transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(241, 254, 0, 0.1), transparent 30%),
+      radial-gradient(circle at 60% 70%, rgba(191, 73, 0, 0.25), transparent 40%);
+     
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+
+
+.mat-toolbar {
+    box-shadow: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Glassmorphism wrapper */
+.glass-wrapper {
+  width: 400px;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05); /* Light glassy background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Border for glass effect */
+}
+
+/* Form input fields */
+.glass-wrapper .input-field {
+  position: relative;
+  margin: 15px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.glass-wrapper .input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.glass-wrapper .input-field input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.glass-wrapper .input-field input:focus ~ label,
+.glass-wrapper .input-field input:valid ~ label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+/* Submit button */
+.glass-wrapper button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.glass-wrapper button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+}
+
+.glass-wrapper .register a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+.glass-wrapper .register a:hover {
+  text-decoration: underline;
+}
+
+/* Style adjustments for the form footer */
+.glass-wrapper .register {
+  margin-top: 30px;
+  color: #fff;
+}
+
+.spline-wrapper {
+  height: 100%;
+}
+
+canvas {
+  display: block;
+  width: 50%;
+  height: 50%;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Ensure modal is on top */
+}
+
+.modal-wrapper {
+  width: 400px;
+  padding: 30px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05); /* Light glassy background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Border for glass effect */
+  text-align: center;
+}
+
+/* Modal header */
+.modal-wrapper h2 {
+  font-size: 1.75rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Modal text */
+.modal-wrapper p {
+  color: #efefef;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Modal buttons */
+.modal-wrapper button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.modal-wrapper button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+}
+.button-container {
+  display: flex;
+  gap: 16px;
+  /* Adds space between buttons */
+}
+
+/* Common Button Styles */
+.btn {
+  border: 2px solid orange;
+  color: white;
+  background-color: transparent;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.btn-n:hover {
+  text-shadow: 0 0 20px rgba(245, 158, 11, 1), 0 0 40px rgba(245, 158, 11, 1); /* Strong yellow glow */
+}
+
+.btn-p {
+  background-color: #d8c832; /* Yellow-600 */
+  color: white;
+  box-shadow: 0 4px 6px rgba(241, 254, 0, 0.4); /* Regular shadow */
+}
+
+.btn-p:hover {
+  background-color: #f2ff07; /* Yellow-500 */
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.9), 0 0 40px rgba(245, 158, 11, 0.7); /* Strong yellow glow */
+}
+/* Primary Button Styles */
+.btn-primary {
+  background-color: #d8c832; /* Yellow-600 */
+  color: white;
+  box-shadow: 0 4px 6px rgba(241, 254, 0, 0.4); /* Regular shadow */
+}
+
+.btn-primary:hover {
+  background-color: #f2ff07; /* Yellow-500 */
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.9), 0 0 40px rgba(245, 158, 11, 0.7); /* Strong yellow glow */
+}
+
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #f2ff07; /* Yellow-600 border */
+  box-shadow: 1px 4px 6px rgba(241, 254, 1, 0.4);/* Regular shadow */
+}
+
+.btn-secondary:hover {
+  background-color: #f2ff07; /* Yellow-500 */
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.9), 0 0 40px rgba(245, 158, 11, 0.7); /* Strong yellow glow */
+}
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+@-webkit-keyframes spinner-animation {
+  0%,
+  20%,
+  80%,
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  30%,
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes spinner-animation {
+  0%,
+  20%,
+  80%,
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  30%,
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.spinner {
+  height: 60px;
+  position: relative;
+  width: 60px;
+}
+
+.spinner div {
+  -webkit-animation: spinner-animation 2.1s infinite backwards;
+  animation: spinner-animation 2.1s infinite backwards;
+  background: #3498db;
+  height: 30px;
+  margin-top: 15px;
+  position: absolute;
+  width: 60px;
+}
+
+.spinner div:after, .spinner div:before {
+  content: '';
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.spinner div:after {
+  top: -15px;
+  border-bottom: 15px solid #3498db;
+}
+
+.spinner div:before {
+  bottom: -15px;
+  border-top: 15px solid #3498db;
+}
+
+.spinner div:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  left: -70px;
+  top: 0;
+}
+
+.spinner div:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  left: -35px;
+  top: 55px;
+}
+
+.spinner div:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  left: 35px;
+  top: 55px;
+}
+
+.spinner div:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  left: 70px;
+  top: 0;
+}
+
+.spinner div:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  left: 35px;
+  top: -55px;
+}
+
+.spinner div:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  left: -35px;
+  top: -55px;
+}
+
+.spinner div:nth-child(7) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  left: 0;
+  top: 0;
+}
+
+
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.9; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite;
+}
+
+/* Ensure smooth transitions for form elements */
+input, select {
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+

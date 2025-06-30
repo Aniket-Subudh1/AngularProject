@@ -1,0 +1,22 @@
+:host ::ng-deep .ngx-charts text {
+  fill: #ffffff !important; 
+  font-weight: 500;
+}
+
+
+:host ::ng-deep .ngx-charts .axis-label text {
+  fill: #ffffff !important; 
+  font-size: 14px;
+  font-weight: bold;
+}
+
+:host ::ng-deep .ngx-charts .legend-label-text {
+  color: #ffffff !important;
+  font-size: 12px;
+}
+
+:host ::ng-deep .ngx-charts .pie-label text {
+  fill: #ffffff !important; 
+  font-size: 12px;
+  font-weight: bold;
+}

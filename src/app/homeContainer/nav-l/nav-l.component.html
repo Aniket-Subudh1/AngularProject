@@ -1,0 +1,36 @@
+<mat-toolbar
+  [ngStyle]="{
+    'background-color': scrollPosition > 10 ? 'rgba(7, 7, 16, 0)' : 'transparent',
+    'backdrop-filter': scrollPosition > 10 ? 'blur(10px)' : 'none',
+    'height': '60px',
+    'padding': '10px 0'
+  }"
+  class="fixed top-0 flex justify-between items-center px-4 z-50"
+>
+  <mat-toolbar-row class="w-full ml-36 flex justify-between items-center">
+    <a routerLink="/" class="cursor-pointer">
+      <img
+        [src]="'/assets/d.png'"
+        alt="Logo"
+        [class]="isMobile ? 'h-8' : 'h-10'"
+        class="w-auto object-contain btn-n"
+      />
+    </a>
+
+    
+
+    <div class="flex items-center space-x-4 ml-12">
+      <button *ngIf="isMobile" mat-icon-button (click)="toggleMenu()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+    
+      <div *ngIf="!isMobile" class="flex gap-5">
+        <button class="btn-p text-white px-4 py-2 rounded-lg text-sm mr-36 "(click)="navigateTo('/signup')">
+           SignUp >
+        </button>
+        
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
